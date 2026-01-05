@@ -2,7 +2,7 @@
 -- Practicalli preferences
 --
 -- which-key menu vertical orientation
--- catppuccin-mocha colorscheme
+-- tokyonight colorscheme
 -- Show key presses in popup (SPC u k)
 -- Snacks customisation
 -- -- Startup dashboard banner
@@ -128,7 +128,6 @@ return {
     end,
   },
   -- Switch between src and test file
-  -- TODO: PR #67 raised on rgroli/other.nvim
   {
     "rgroli/other.nvim",
     ft = { "clojure" },

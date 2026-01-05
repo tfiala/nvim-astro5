@@ -5,11 +5,8 @@
 -- Pass configuration files to each tool
 -- ---------------------------------------------------------
 
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- INFO: Config in this file skipped if `PRACTICALLI_NONELS_CONFIG` environment variable is not set to true
-local nonels_config = vim.env.PRACTICALLI_NONELS_CONFIG
-if nonels_config ~= "true" then return {} end
+-- INFO: Config enabled when `PRACTICALLI_NONELS_CONFIG` environment variable is set
+if not vim.env.PRACTICALLI_NONELS_CONFIG then return {} end
 
 ---@type LazySpec
 return {

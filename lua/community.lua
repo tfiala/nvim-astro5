@@ -1,5 +1,3 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCommunity: import any community modules here
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
 -- This guarantees that the specs are processed before any user plugins.
@@ -24,9 +22,6 @@ return {
 
   -- ----------------------------------------------
   -- Themes and Color
-  --
-  -- Colorscheme (Themes)
-  { import = "astrocommunity.colorscheme.catppuccin" },
 
   -- color picker and highlighter
   { import = "astrocommunity.color.ccc-nvim" },

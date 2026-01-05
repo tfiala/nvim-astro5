@@ -6,11 +6,8 @@
 -- Lua Language server
 -- ------------------------------------------
 
--- ------------------------------------------
--- INFO: conditional loads if `OS_TERMUX` is true
-local termux = vim.env.OS_TERMUX
-if not termux then return {} end
--- ------------------------------------------
+-- INFO: Config enabled when `OS_TERMUX` environment variable is set
+if not vim.env.OS_TERMUX then return {} end
 
 -- ------------------------------------------
 ---@type LazySpec
@@ -21,12 +18,8 @@ return {
     -- overrides `require("mason-tool-installer").setup(...)`
     -- Language server names found in `:Mason`
     opts = {
-      ensure_installed = {
-        -- Conditional install of language servers
-        "lua-language-server",
-        "clojure-lsp",
-        condition = function() return not termux end,
-      },
+      -- Exclude these from Mason installation on Termux (use local servers instead)
+      ensure_installed = {},
     },
   },
   {
